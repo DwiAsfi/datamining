@@ -33,7 +33,7 @@ interval_sepal_width_ef_binning = pd.qcut(SEPAL_WIDTH_SERIES, amount_of_binning)
 
 [0;31m[0m
 [0;31mTypeError[0mTraceback (most recent call last)
-[0;32m<ipython-input-46-b5f241ae12e4>[0m in [0;36m<module>[0;34m[0m
+[0;32m<ipython-input-28-b5f241ae12e4>[0m in [0;36m<module>[0;34m[0m
 [1;32m      8[0m [0;34m[0m[0m
 [1;32m      9[0m [0;31m# untuk menghitung interval equal-frequency[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
 [0;32m---> 10[0;31m [0msepal_width_ef_binning[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mqcut[0m[0;34m([0m[0mSEPAL_WIDTH_SERIES[0m[0;34m,[0m [0mamount_of_binning[0m[0;34m,[0m [0mlabels[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m

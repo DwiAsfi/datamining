@@ -369,11 +369,16 @@ link : <a class="reference external" href="https://raw.githubusercontent.com/Ope
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mengimpor paket pandas kemudian diberi nama alias pd</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="c1"># mengimpor paket numpy kemudian diberi nama alias np</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1"># mengimpor paket matplotlib.pyplot kemudian diberi nama alias plt</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># mengimpor paket statistics kemudian diberi nama alias st</span>
 <span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">st</span>
 
+<span class="c1"># membaca dataset csv dari url</span>
 <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/Opensourcefordatascience/Data-sets/master/Iris_Data.csv&#39;</span>
 <span class="n">c</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
@@ -408,7 +413,7 @@ link : <a class="reference external" href="https://raw.githubusercontent.com/Ope
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6d302794-6081-4f28-8a48-1497c9d66bf4">
+  <div id="df-383525aa-037a-4103-81c4-f7a5c3802dc5">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -528,7 +533,7 @@ link : <a class="reference external" href="https://raw.githubusercontent.com/Ope
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6d302794-6081-4f28-8a48-1497c9d66bf4')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-383525aa-037a-4103-81c4-f7a5c3802dc5')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -579,12 +584,12 @@ link : <a class="reference external" href="https://raw.githubusercontent.com/Ope
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6d302794-6081-4f28-8a48-1497c9d66bf4 button.colab-df-convert');
+          document.querySelector('#df-383525aa-037a-4103-81c4-f7a5c3802dc5 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6d302794-6081-4f28-8a48-1497c9d66bf4');
+          const element = document.querySelector('#df-383525aa-037a-4103-81c4-f7a5c3802dc5');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -617,6 +622,7 @@ link : <a class="reference external" href="https://raw.githubusercontent.com/Ope
 </div>
 </div>
 <p><strong>Mean (rata-rata)</strong></p>
+<p>Mean dapat dikatakan sebagai wakil kumpulan data. Menentukan mean dapat dilakukan dengan cara menjumlahkan seluruh nilai data, kemudian membaginya dengan banyaknya data.</p>
 <ul>
 <li><p>Data Tunggal</p>
 <div class="math notranslate nohighlight">
@@ -661,19 +667,31 @@ n &amp;=\ Total \ frekuensi \ atau \ data
 </div>
 </div>
 <p><strong>Median (nilai tengah)</strong></p>
+<p>Median adalah nilai tengah yang diambil dari data, yang disusun dengan cara yang berurutan mulai dari kecil hingga terbesar. Median dihitung secara matematis dengan dilambangkan Me. Median adalah nilai di tengah deret nilai yang disusun dengan data urut dari yang kecil sampai besar, misal dalam deret 3,4,7 mediannya adalah 4.</p>
 <ul>
-<li><p>Data Tunggal</p>
+<li><p>Data Tunggal<br>
+Cara menentukan median pada data tunggal cukup mudah. Anda dapat mengurutkannya dari data terkecil ke data terbesar. Jika banyak data ganjil tentu kita langsung bisa menentukan nilai tengahnya.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
 \displaystyle
 Jumlah \ data \ ganjil &amp;: \\
 M_{e} &amp;= \frac{X_{(n -1)}}{2} \\
+\end{align*}
+\end{split}\]</div>
+</li>
+</ul>
+<p>Bagaimana jika banyaknya data genap? Pada data tunggal untuk menentukan median yaitu:<br>
+Misalkan banyaknya data n, jika n ganjil maka median ditentukan dengan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\displaystyle
 Jumlah \ data \ genap &amp;: \\
 M_{e} &amp;= \frac{X_{(\frac{n}{2})}+X_{(\frac{n}{2}+1)}}{2}
 \end{align*}
 \end{split}\]</div>
-</li>
+<ul>
 <li><p>Data Kelompok</p>
 <p><em>Median data kelompok artinya data dikelompokkan dalam interval-interval kelas yang sama panjang.</em> Untuk mengetahui nilai mediannya dapat ditentukan dengan rumus berikut ini.</p>
 </li>
@@ -685,6 +703,13 @@ M_{e} &amp;= \frac{X_{(\frac{n}{2})}+X_{(\frac{n}{2}+1)}}{2}
 M_{e} &amp;= L + c\left( \frac{\frac{1}{2}n - f_{k}}{\sum f_{i}} \right)
 \end{align*}
 \]</div>
+<p>Keterangan:</p>
+<p>Me : median</p>
+<p>L : tepi bawah kelas median</p>
+<p>n : banyaknya data</p>
+<p>Fk : frekuensi kumulatif sebelum kelas median</p>
+<p>fi : frekuensi kelas median</p>
+<p>c : panjang kelas</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Median pada tabel iris</span>
@@ -700,19 +725,27 @@ M_{e} &amp;= L + c\left( \frac{\frac{1}{2}n - f_{k}}{\sum f_{i}} \right)
 </div>
 </div>
 <p><strong>Modus (data yang sering muncul)</strong></p>
-<p><em>Modus yaitu nilai yang paling sering muncul pada data</em></p>
+<p><strong>Modus</strong> adalah sebuah nilai data yang paling sering muncul atau data yang mempunyai nilai frekuensi yang paling tinggi.</p>
 <ul>
+<li><p>Data Tunggal<br>
+Untuk mencari nilai dari modus pada data tunggal, kita hanya perlu mengurutkan data dari yang terkecil sampai ke yang terbesar atau bisa sebaliknya kemudian kita cek data atau angka berapa yang nilai yang paling banyak muncul.</p></li>
 <li><p>Data Kelompok</p>
 <p>Modus data kelompok Modus data kelompok dirumuskan sebagai berikut:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
 \displaystyle
-M_{o} &amp;= L + c\left( \frac{d_{1}}{d_{1} + d_{2}} \right)c \\
+M_{o} &amp;= L + c\left( \frac{d_{1}}{d_{1} + d_{2}} \right) \\
 \end{align*}
 \end{split}\]</div>
 </li>
 </ul>
+<p>M0 : modus data kelompok</p>
+<p>L : tepi bawah kelas modus</p>
+<p>d1 : selisih frekuensi kelas modus dengan kelas sebelumnya</p>
+<p>d2 : selisih frekuensi kelas modus dengan kelas sesudahnya</p>
+<p>c : panjang kelas
+nilai d1 dan d2 to adalah mutlak (selalu positif)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modus pada tabel iris</span>
@@ -908,6 +941,7 @@ J &amp;= X_{max} - X_{min}
 </div>
 </div>
 <p><strong>Simpangan Baku</strong></p>
+<p>Standar deviasi dalam statistik, umumnya dipakai untuk menentukan kedekatan sebaran data yang ada di dalam sampel dan seberapa dekat titik data individu dengan mean atau rata-rata nilai dari sampel itu sendiri.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}
@@ -918,6 +952,11 @@ Data \ Sampel &amp;: \\
 s &amp;= \sqrt{\frac{\sum_{i=1}^{n}\left( x_{i} - \bar x \right)^{2}}{n-1}}
 \end{align*}
 \end{split}\]</div>
+<p>keterangan:
+s = simpangan baku</p>
+<p>x1 = nilai x ke-i</p>
+<p>x = nilai rata-rata data</p>
+<p>n = jumlah data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simpangan Baku</span>
@@ -969,6 +1008,7 @@ Name: petal_length, dtype: float64
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">skw</span> <span class="o">=</span> <span class="n">c</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">]</span>
 <span class="n">skw</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="c1"># Menampilkan histogram untuk kolom sepal_length menggunakan seaborn</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">skw</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -987,6 +1027,7 @@ Name: petal_length, dtype: float64
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">skw</span> <span class="o">=</span> <span class="n">c</span> <span class="p">[</span><span class="s1">&#39;sepal_width&#39;</span><span class="p">]</span>
 <span class="n">skw</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="c1"># Menampilkan histogram untuk kolom sepal_width menggunakan seaborn</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">skw</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -1005,6 +1046,7 @@ Name: petal_length, dtype: float64
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">skw</span> <span class="o">=</span> <span class="n">c</span> <span class="p">[</span><span class="s1">&#39;petal_length&#39;</span><span class="p">]</span>
 <span class="n">skw</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="c1"># Menampilkan histogram untuk kolom petal_length menggunakan seaborn</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">skw</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -1023,6 +1065,7 @@ Name: petal_length, dtype: float64
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">skw</span> <span class="o">=</span> <span class="n">c</span> <span class="p">[</span><span class="s1">&#39;petal_width&#39;</span><span class="p">]</span>
 <span class="n">skw</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="c1"># Menampilkan histogram untuk kolom petal_width menggunakan seaborn</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">skw</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>

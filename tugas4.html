@@ -328,12 +328,63 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   K-Means Clustering of Iris Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-mining">
+   Data Mining
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Data Mining
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tujuan-data-mining">
+     Tujuan Data Mining
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metode-data-mining">
+     Metode Data Mining
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#library-python">
+   Library Python
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -345,6 +396,46 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   K-Means Clustering of Iris Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-mining">
+   Data Mining
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Data Mining
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tujuan-data-mining">
+     Tujuan Data Mining
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metode-data-mining">
+     Metode Data Mining
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#library-python">
+   Library Python
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -354,6 +445,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="k-means-clustering-of-iris-data">
 <h1>K-Means Clustering of Iris Data<a class="headerlink" href="#k-means-clustering-of-iris-data" title="Permalink to this headline">#</a></h1>
+<p>K-means merupakan salah satu algoritma yang bersifat unsupervised learning. K-Means memiliki fungsi untuk mengelompokkan data kedalam data cluster. Algoritma ini dapat menerima data tanpa ada label kategori. K-Means Clustering Algoritma juga merupakan metode non-hierarchy. Metode Clustering Algoritma adalah mengelompokkan beberapa data ke dalam kelompok yang menjelaskan data dalam satu kelompok memiliki karakteristik yang sama dan memiliki karakteristik yang berbeda dengan data yang ada di kelompok lain.</p>
 <p>Getting Data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -378,7 +470,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4ca8c5a7-9fea-4f2c-a15f-2a349af45467">
+  <div id="df-7ede815f-e76d-4498-a214-065f136e3ee7">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -449,7 +541,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4ca8c5a7-9fea-4f2c-a15f-2a349af45467')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7ede815f-e76d-4498-a214-065f136e3ee7')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -500,12 +592,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4ca8c5a7-9fea-4f2c-a15f-2a349af45467 button.colab-df-convert');
+          document.querySelector('#df-7ede815f-e76d-4498-a214-065f136e3ee7 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4ca8c5a7-9fea-4f2c-a15f-2a349af45467');
+          const element = document.querySelector('#df-7ede815f-e76d-4498-a214-065f136e3ee7');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -561,6 +653,55 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data-mining">
+<h1>Data Mining<a class="headerlink" href="#data-mining" title="Permalink to this headline">#</a></h1>
+<section id="id1">
+<h2>Data Mining<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>penambangan data adalah ilmu data untuk menganalisis data secara sistematis yang didasarkan pada kerangka ilmiah. proses data mining seringkali menggunakana metode statistika, matematika, hingga memanfaatkan teknologi artificial intelligence. Oleh karena itu, data science bersifat :</p>
+<ul class="simple">
+<li><p>Adaptif, iteratif, dan oendekatan bertahap untuk analisa data</p></li>
+<li><p>Dilakukan dalam kerangka sistematis</p></li>
+<li><p>Mencari model yang optimal</p></li>
+<li><p>Menilai dan memperhitungkan biaya sebenarnya dari kesalahan prediksi</p></li>
+</ul>
+</section>
+<section id="tujuan-data-mining">
+<h2>Tujuan Data Mining<a class="headerlink" href="#tujuan-data-mining" title="Permalink to this headline">#</a></h2>
+<p>Data mining dilakukan untuk memenuhi beberapa tujuan tertentu. Berikut ini adalah tujuan-tujuan dari data mining:</p>
+<ul class="simple">
+<li><p><strong>Sebagai sarana menjelaskan (<em>Explanatory</em>)</strong>  Data mining dapat digunakan sebagai sarana untuk menjelaskan suatu kondisi penelitian.</p></li>
+<li><p><strong>Sebagai sarana konfirmasi (<em>Confirmatory</em>)</strong>  Data mining dapat digunakan sebagai sarana untuk memastikan sebuah pernyataan atau mempertegas suatu hipotesis.</p></li>
+<li><p><strong>Sebagai sarana eksplorasi (<em>Exploratory</em>)</strong>  Data mining dapat digunakan sebagai sarana untuk mencari pola baru yang sebelumnya tidak terdeteksi.</p></li>
+</ul>
+</section>
+<section id="metode-data-mining">
+<h2>Metode Data Mining<a class="headerlink" href="#metode-data-mining" title="Permalink to this headline">#</a></h2>
+<p>Secara umum, terdapat beberapa metode yang digunakan untuk melakukan data mining. Berikut ini adalah metodenya:</p>
+<ul class="simple">
+<li><p><strong>Association.</strong> Merupakan metode berbasis aturan yang digunakan untuk menemukan asosiasi dan hubungan variabel dalam satu set data. Biasanya analisis ini terdiri dari pernyataan “if atau then” sederhana. Association banyak digunakan dalam mengidentifikasi korelasi produk dalam keranjang belanja untuk memahami kebiasaan konsumsi pelanggan. Sehingga, perusahaan dapat mengembangkan strategi penjualan dan membuat sistem rekomendasi yang lebih baik.</p></li>
+<li><p><strong>Classification.</strong> Merupakan metode yang paling umum digunakan dalam data mining. Classification adalah tindakan untuk memprediksi kelas suatu objek.</p></li>
+<li><p><strong>Regression.</strong> Merupakan teknik yang menjelaskan variabel dependen melalui proses analisis variabel independen. Sebagai contoh, prediksi penjualan suatu produk berdasarkan korelasi antara harga produk dengan tingkat pendapatan rata-rata pelanggan.</p></li>
+<li><p><strong>Clustering.</strong> Digunakan dalam membagi kumpulan data menjadi beberapa kelompok berdasarkan kemiripan atribut yang dimiliki. Contoh kasusnya adalah Customer Segmentation. Ia membagi pelanggan ke dalam beberapa grup berdasarkan tingkat kemiripannya.</p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="library-python">
+<h1>Library Python<a class="headerlink" href="#library-python" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>NumPy<br>
+NumPy (Numerical Python) adalah library python yang digunakan untuk bekerja dengan array dan juga memiliki fungsi yang bekerja dalam domain aljabar linier, transformasi fourier, dan matriks. Library yang dibuat pada 2005 oleh Travis Oliphant ini merupakan proyek open source sehingga Anda dapat menggunakannya secara bebas. Meski python memiliki daftar yang melayani tujuan array, prosesnya begitu lambat sehingga memerlukan NumPy yang bisa menyediakan objek array hingga 50 kali lebih cepat daripada daftar python tradisional.</p></li>
+<li><p>Pandas<br>
+Pandas adalah perpustakaan penting bagi para data scientist. Library untuk machine learning yang bersifat open source ini menyediakan struktur data tingkat tinggi yang fleksibel serta berbagai alat analisis. Penggunaannya memudahkan analisis data, manipulasi data, dan pembersihan data. Pandas mendukung berbagai jenis operasi seperti penyortiran, pengindeksan ulang, iterasi, penggabungan, konversi data, visualisasi, agregasi, dan lain sebagainya.</p></li>
+<li><p>Matplotlib<br>
+Jenis library ini bertanggung jawab untuk merencanakan data numerik. Itulah alasan Matplotlib digunakan dalam analisis data. Library python yang bersifat open source ini dapat memplot angka-angka berdefinisi tinggi seperti diagram lingkaran, histogram, scatterplot, grafik, dan lain-lain.</p></li>
+<li><p>Seaborn<br>
+Seaborn adalah pustaka Python yang paling umum digunakan untuk visualisasi data statistik, pembuatan hotmap dan visualisasi yang merangkum data dan menggambarkan distribusi. Sama seperti Matplotlib, Seaborn dapat digunakan pada data frame dan array. Selain itu, Seaborn juga berfungsi untuk plot dasar– grafik batang, grafik garis, dan diagram lingkaran.</p></li>
+<li><p>SciPy<br>
+SciPy atau Scientific Python digunakan untuk masalah matematika, sains, dan teknik yang kompleks. SciPy dibangun di atas ekstensi NumPy dan memungkinkan pengembang untuk memanipulasi dan memvisualisasikan data.SciPy menyediakan rutinitas numerik yang mudah digunakan dan efisien untuk aljabar linier, statistik, integrasi, dan optimisasi. Penggunannya meliputi pemrosesan gambar multidimensi, penyelesaian transformasi Fourier, dan persamaan diferensial.</p></li>
+<li><p>SciKit-Learn<br>
+SciKit-Learn menampilkan algoritma klasifikasi, regresi, dan pengelompokan, termasuk DBSCAN, peningkatan gradien, mesin vektor dukungan, dan random forsts. Library yang dikembangkan oleh David Cournapeau ini berfungsi untuk menangani standard machine learning dan aplikasi penambangan data.</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
